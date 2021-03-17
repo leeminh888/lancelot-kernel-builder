@@ -6,7 +6,7 @@ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarc
 export GCC_PATH="$TMPDOWN/aarch64-linux-android-4.9"
 git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b pie-gsi --depth 1
 export GCC_ARM32_PATH="$TMPDOWN/arm-linux-androideabi-4.9"
-git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 android10-gsi --depth 1
+git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android10-gsi --depth 1
 export CLANG_PATH="$TMPDOWN/linux-x86/clang-r353983c"
 export CC=clang 
 export CLANG_TRIPLE=aarch64-linux-gnu- 
