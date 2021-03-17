@@ -2,11 +2,11 @@ export ARCH=arm64
 git clone https://github.com/areyoudeveloper1/android_kernel_xiaomi_mt6768/ -b eleven --depth 1
 export TMPDOWN=$(mktemp -d)
 cd "$TMPDOWN"
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 --depth 1
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b pie-gsi --depth 1
 export GCC_PATH="$TMPDOWN/aarch64-linux-android-4.9"
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 --depth 1
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b pie-gsi --depth 1
 export GCC_ARM32_PATH="$TMPDOWN/arm-linux-androideabi-4.9"
-git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 --depth 1
+git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 android10-gsi --depth 1
 export CLANG_PATH="$TMPDOWN/linux-x86/clang-r353983c"
 export CC=clang 
 export CLANG_TRIPLE=aarch64-linux-gnu- 
