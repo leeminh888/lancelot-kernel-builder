@@ -1,0 +1,41 @@
+#=================================================
+# Description: Build using GitHub Actions
+#=====================
+#=================================================
+# Description: Build using GitHub Actions
+#=================================================
+
+name: Build Lancelot kernel
+
+on: 
+  push:
+    branches:
+      - main
+  release:
+    types: [published]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-20.04
+
+
+
+
+
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+    
+    - name: Build
+      run: |
+        sudo apt-get update
+        sudo apt-get install android-tools-mkbootimg bc bison build-essential ca-certificates cpio curl flex git kmod libssl-dev libtinfo5 python2 python python3 gcc g++ sudo unzip wget xz-utils -y --no-install-recommends
+        chmod +x build.sh && ./build.sh
+
+    - name: Upload boot image 
+      uses: actions/upload-artifact@master
+      with:
+        name: kernel image
+        path: /home/runner/work/lancelot-kernel-builder/lancelot-kernel-builder/android_kernel_xiaomi_mt6768/out/arch/arm64/boot/Image.gz-dtb
