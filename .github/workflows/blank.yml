@@ -38,10 +38,10 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: kernel image
-        path: /home/runner/work/lancelot-kernel-builder/lancelot-kernel-builder/android_kernel_xiaomi_mt6768/out/arch/arm64/boot/Image.gz-dtb
+        path: /home/runner/work/lancelot-kernel-builder/lancelot-kernel-builder/kernel_xiaomi_vayu/out/arch/arm64/boot/Image.gz-dtb
     
     - name: Upload conf 
       uses: actions/upload-artifact@master
       with:
         name: kernel Config
-        path: /home/runner/work/lancelot-kernel-builder/lancelot-kernel-builder/android_kernel_xiaomi_mt6768/out/.config
+        path: /home/runner/work/lancelot-kernel-builder/lancelot-kernel-builderkernel_xiaomi_vayu/out/.config
