@@ -5,7 +5,7 @@
 # Description: Build using GitHub Actions
 #=================================================
 
-name: Build Lancelot kernel
+name: Build kernel
 
 on: 
   push:
