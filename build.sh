@@ -32,13 +32,3 @@ export CROSS_COMPILE="aarch64-linux-android-"
 export CROSS_COMPILE_ARM32="arm-linux-androideabi-"
 make O=out vayu_user_defconfig
 make O=out CC=$CC -j$(nproc --all)
-
-cp ./out/arch/arm64/boot/Image.gz-dtb ./AnyKernel3/
-cp ./out/arch/arm64/boot/dtbo.img ./AnyKernel3/
-
-#still needed?
-cd AnyKernel3/
-zip -r9 AnyKernel3.zip *
-mv AnyKernel3.zip ../
-
-
