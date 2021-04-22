@@ -1,5 +1,5 @@
 export ARCH=arm64
-git clone https://github.com/AndroidBlobs/kernel_xiaomi_vayu -b release-LA.UM.9.1.r1-07000-SMxxx0.0 --depth 1
+git clone https://github.com/xawlw/kernel_xiaomi_vayu -b r --depth 1
 export TMPDOWN=$(mktemp -d)
 cd "$TMPDOWN"
 git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android11-gsi --depth 1
